@@ -11,7 +11,7 @@
   <?php
 // define variables and set to empty values
 $public_emailErr = $githubErr = "";
-$public_email = $github = $bio = $twitter_username = $linkedIn_username = $facebook_username=$submited = $fileToUpload = "";
+$public_email = $github = $bio = $twitter_username = $linkedIn_username = $facebook_username=$submited = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -70,11 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $facebook_username = test_input($_POST["facebook_username"]);
   }
 
-  if (empty($_POST["fileToUpload"])) {
-    $fileToUpload = "";
-  } else {
-    $fileToUpload= test_input($_POST["fileToUpload"]);
-  }
+  
 
   $submited = test_input($_POST["submited"]);
 }
@@ -152,9 +148,7 @@ function test_input($data) {
           <label>Bio</label>
           <br />
           <textarea name="bio" 
-            placeholder="Enter your bio" cols="30" rows="10"></textarea>
-         <?php echo $bio?>
-        </textarea>
+            placeholder="Enter your bio" cols="30" rows="10"><?php echo $bio?></textarea>
           <br /><br />
         </div>
         <div class="single-form">
@@ -186,14 +180,6 @@ function test_input($data) {
             value="<?php echo $facebook_username;?>"
             placeholder="Facebook username"
           />
-          <br /><br />
-        </div>
-
-        <div class="single-form">
-          <label>Profile picture</label> <br />
-          <input type="file" name="fileToUpload" />
-          <br />
-          <!-- <input type="submit" name="submit" value="Upload Image" /> -->
           <br /><br />
         </div>
         <div class="single-form">
