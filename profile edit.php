@@ -108,12 +108,12 @@ function test_input($data) {
     // $sql = "INSERT INTO user1 (public_email, github, bio, twitter, linkedIn, facebook, uploadtofile, ) 
     // VALUES ('$public_email','$github','$bio','$twitter_username','$linkedIn_username','$facebook_username','$facebook_username)";
 
-    $sql = "INSERT INTO usersinfo (public_email, github, bio, twitter_username, linkedIn_username, facebook_username, fileToUpload)   VALUES ('$public_email' , '$github' , '$bio' , '$twitter_username' , '$linkedIn_username' ,'$facebook_username' , '$fileToUpload')";
+    $sql = "INSERT INTO usersinfo (public_email, github, bio, twitter_username, linkedIn_username, facebook_username)   VALUES ('$public_email' , '$github' , '$bio' , '$twitter_username' , '$linkedIn_username' ,'$facebook_username' , '$fileToUpload')";
 
 
 
   // $sql = "INSERT INTO users (name, public_email, url, bio, twitter_username, linkedIn_username, facebook_username, department, location, fileToUpload)
-  // VALUES ('$name' , '$public_email' , '$github' , '$bio' , '$twitter_username' , '$linkedIn_username' ,'$facebook_username' , '$department' , '$location' , '$fileToUpload')";
+  // VALUES ('$name' , '$public_email' , '$github' , '$bio' , '$twitter_username' , '$linkedIn_username' ,'$facebook_username' , '$department' , '$location')";
   
  (mysqli_query($conn, $sql)); 
     
