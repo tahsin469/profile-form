@@ -19,8 +19,7 @@ $sql = "CREATE TABLE usersinfo (
   bio VARCHAR(30),
   twitter_username VARCHAR(40),
   linkedIn_username VARCHAR(10),
-  facebook_username VARCHAR(30),
-  fileToUpload VARCHAR(100)
+  facebook_username VARCHAR(30)
 )";
 
 if (mysqli_query($conn, $sql)) {
